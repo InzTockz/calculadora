@@ -1,10 +1,10 @@
 <div class="flex mt-10">
-    <div class="flex flex-col justify-center items-center ring-2 w-full">
+    <div class="flex flex-col justify-center items-center w-full font-semibold">
         <!-- Cuerpo de la calculadora-->
-        <div class="flex flex-row justify-center p-2 gap-4 ring-2 shadow-2xl">
-            <div class="flex flex-col  w-full">
+        <div class="flex flex-row justify-center p-6 gap-4 ring-1 ring-black shadow-2xl bg-gray-300 rounded-lg">
+            <div class="flex flex-col  w-full gap-2">
                 <div class="flex flex-row mb-2 w-full">
-                    <div class="flex flex-col justify-center items-center ring-2 w-full size-20">
+                    <div class="flex flex-col justify-center items-center ring-1 ring-black w-full size-20 bg-orange-100 rounded-md">
                        <!--<input class="text-right w-full h-full pr-2" [(ngModel)]="numeroUno" readonly>-->
                        <span class="text-right w-full pr-2 text-2xl">{{numeroUno}} 
                         {{indiceOperador == 'suma' ? '+':indiceOperador == 'resta'?'-':
@@ -13,38 +13,38 @@
                         <span class="text-right w-full pr-2 text-2xl">{{textoEnPantallaResultado != 0 ? textoEnPantallaResultado:''}}</span>
                     </div>
                 </div>
-                <div class="ring-2 flex flex-row">
+                <div class="ring-1 ring-black bg-orange-100 flex flex-row">
                     <div class="flex flex-col gap-2 p-1">
-                        <div class="ring-2 size-12"><button class="w-full h-full">%</button></div>
-                        <div class="ring-2 size-12"><button class="w-full h-full">1/x</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('7')" class="w-full h-full">7</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('4')" class="w-full h-full">4</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('1')" class="w-full h-full">1</button></div>
-                        <div class="ring-2 size-12"><button class="w-full h-full">+/-</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button class="w-full h-full" disabled>%</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button class="w-full h-full" disabled>1/x</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('7')" class="w-full h-full">7</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('4')" class="w-full h-full">4</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('1')" class="w-full h-full">1</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button class="w-full h-full" disabled>+/-</button></div>
                     </div>
                     <div class="flex flex-col gap-2 p-1">
-                        <div class="ring-2 size-12"><button class="w-full h-full">CE</button></div>
-                        <div class="ring-2 size-12"><button class="w-full h-full">x^2</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('8')" class="w-full h-full">8</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('5')" class="w-full h-full">5</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('2')" class="w-full h-full">2</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('0')" class="w-full h-full">0</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button class="w-full h-full" disabled>CE</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button class="w-full h-full" disabled>x^2</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('8')" class="w-full h-full">8</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('5')" class="w-full h-full">5</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('2')" class="w-full h-full">2</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('0')" class="w-full h-full">0</button></div>
                     </div>
                     <div class="flex flex-col gap-2 p-1">
-                        <div class="ring-2 size-12"><button (click)="btnBorrarTexto()" class="w-full h-full">C</button></div>
-                        <div class="ring-2 size-12"><button class="w-full h-full">2^7</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('9')" class="w-full h-full">9</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('6')" class="w-full h-full">6</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('3')" class="w-full h-full">3</button></div>
-                        <div class="ring-2 size-12"><button (click)="calculo('.')"class="w-full h-full">.</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="btnBorrarTexto()" class="w-full h-full">C</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button class="w-full h-full" disabled>2^7</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('9')" class="w-full h-full">9</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('6')" class="w-full h-full">6</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('3')" class="w-full h-full">3</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="calculo('.')"class="w-full h-full">.</button></div>
                     </div>
                     <div class="flex flex-col gap-2 p-1">
-                        <div class="ring-2 size-12"><button (click)="btnBorrarTextoPorTexto()" class="w-full h-full">Borrar</button></div>
-                        <div class="ring-2 size-12"><button (click)="tipoCalculo('dividir')" class="w-full h-full">/</button></div>
-                        <div class="ring-2 size-12"><button (click)="tipoCalculo('multiplicar')" class="w-full h-full">x</button></div>
-                        <div class="ring-2 size-12"><button (click)="tipoCalculo('resta')" class="w-full h-full">-</button></div>
-                        <div class="ring-2 size-12"><button (click)="tipoCalculo('suma')" class="w-full h-full">+</button></div>
-                        <div class="ring-2 size-12"><button (click)="resultadoCalculo()" class="w-full h-full">=</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="btnBorrarTextoPorTexto()" class="w-full h-full">Borrar</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="tipoCalculo('dividir')" class="w-full h-full">/</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="tipoCalculo('multiplicar')" class="w-full h-full">x</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="tipoCalculo('resta')" class="w-full h-full">-</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="tipoCalculo('suma')" class="w-full h-full">+</button></div>
+                        <div class="ring-2 size-12 bg-slate-500 text-white hover:bg-slate-600"><button (click)="resultadoCalculo()" class="w-full h-full">=</button></div>
                     </div>
                 </div>
             </div>
